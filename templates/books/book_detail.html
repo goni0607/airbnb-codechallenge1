@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+  Books List
+{% endblock page_title %}
+
+
+{% block page_content %}
+  <h2>{{ book.title }}</h2>
+
+  <ul>
+    <li>year: {{ book.year }}</li>
+    <li>category: {{ book.category }}</li>
+    <li>rating: {{ book.rating }}</li>
+    <li>writer: {{ book.writer }}</li>
+  </ul>
+
+  <div>
+    <a href="{% url "books:edit" book.pk %}">Edit Book</a>
+    <a href="{% url "books:list" %}">Go to books list</a>
+  </div>
+{% endblock page_content %}

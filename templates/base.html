@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block page_title %}{% endblock page_title %} | AirBnB CodeChallenge</title>
+  <style>
+    body { display: flex; justify-content: center; }
+    #wrapper { display: flex; flex-direction: column; width: 800px; }
+    #nav-menu ul { display: flex; justify-content: space-between; }
+    .func-links { margin-top: 2rem; }
+    .list li { margin: 1rem 0; }
+    footer { margin-top: 3rem; }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    {% include "partials/header.html" %}
+
+    {% block page_content %}{% endblock page_content %}
+
+    {% include "partials/footer.html" %}
+  </div>
+</body>
+  
+</html>

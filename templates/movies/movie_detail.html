@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block page_title %} 
+    Movie - {{ movie.title }}
+{%endblock page_title %} 
+
+{% block page_content %}
+    <h2>{{ movie.title }}</h2>
+    <ul>
+        <li>Year: {{ movie.year }}</li>
+        <li>Rating: {{ movie.rating }}</li>
+        <li>Director: {{ movie.director }}</li>
+    </ul>
+
+    <h3>Categories</h3>
+    <ul>
+    {% for c in movie.category.all %} 
+        <li>{{ c }}</li>
+    {% endfor %}
+    </ul>
+
+    <h3>Cast</h3>
+    <ul>
+    {% for c in movie.cast.all %} 
+        <li>{{ c }}</li>
+    {% endfor %}
+    </ul>
+
+    <div>
+        <a href="{% url "movies:edit" movie.pk %}">Edit Movie</a>
+        <a href="{% url "movies:list" %}">Go to the movies list</a>
+    </div>
+{% endblock page_content %}

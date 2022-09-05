@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+  Home
+{% endblock page_title %}
+
+
+{% block page_content %}
+  <h2>Welcome AirBnB Challenge!!</h2>
+
+  <section>
+    <header>
+      <h3>Latest Books List</h3>
+    </header>
+    <div>
+      <ul>
+      {% for book in books %}
+        <li>{{book.title}}</li>
+      {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <header>
+      <h3>Latest Movies List</h3>
+    </header>
+    <div>
+      <ul>
+      {% for movie in movies %}
+        <li>{{movie.title}}</li>
+      {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <header>
+      <h3>Latest People List</h3>
+    </header>
+    <div>
+      <ul>
+      {% for person in people %}
+        <li>{{person.name}}</li>
+      {% endfor %}
+      </ul>
+    </div>
+  </section>
+{% endblock page_content %}
