@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+  Create Movie
+{% endblock page_title %}
+
+
+{% block page_content %}
+  <h2>Create Movie</h2>
+
+  <div>
+    {% include "./mixins/movie_form.html" with form=form cta="Create Movie" %}
+  </div>
+
+  <div class="func-links">
+    <a href="{% url "movies:list" %}">Go to movies list</a>
+  </div>
+{% endblock page_content %}

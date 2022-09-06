@@ -1,4 +1,4 @@
-from django.views.generic import ListView, DetailView, UpdateView
+from django.views.generic import ListView, DetailView, UpdateView, CreateView
 from . import models as models
 
 
@@ -32,4 +32,22 @@ class Update(UpdateView):
         "category",
         "director",
         "cast",
+        "cover_image",
+    )
+
+
+class Create(CreateView):
+
+    """Create Class Definition"""
+
+    model = models.Movie
+    template_name = "movies/movie_create.html"
+    fields = (
+        "title",
+        "year",
+        "rating",
+        "category",
+        "director",
+        "cast",
+        "cover_image",
     )

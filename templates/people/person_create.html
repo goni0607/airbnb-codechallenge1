@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+  Create Person
+{% endblock page_title %}
+
+
+{% block page_content %}
+  <h2>Create Person</h2>
+
+  <div>
+    {% include "./mixins/person_form.html" with form=form cta="Create Person" %}
+  </div>
+
+  <div class="func-links">
+    <a href="{% url "people:list" %}">Go to people list</a>
+  </div>
+{% endblock page_content %}

@@ -7,7 +7,7 @@
 
 {% block page_content %}
   <h2>People List</h2>
-  <ul>
+  <ul class="list">
   {% for person in people %}
     <li><a href="{% url "people:detail" person.pk %}">{{ person.name }} - {{ person.created_at|date:"Y-m-d" }}</a></li>
   {% endfor %}
@@ -21,5 +21,9 @@
       {% if page_obj.has_next  %}
         <a href="?page={{page_obj.next_page_number}}">Next</a>
       {% endif %}
+    </div>
+
+    <div class="func-links">
+      <a href="{% url 'people:create' %}">Create Person</a>
     </div>
 {% endblock page_content %}

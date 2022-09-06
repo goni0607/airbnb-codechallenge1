@@ -29,6 +29,7 @@ class Update(UpdateView):
     fields = (
         "name",
         "kind",
+        "photo",
     )
 
 
@@ -37,8 +38,9 @@ class Create(CreateView):
     """Create Class Definition"""
 
     model = models.Person
-    template_name = "people/person_edit.html"
+    template_name = "people/person_create.html"
     fields = (
         "name",
         "kind",
+        "photo",
     )

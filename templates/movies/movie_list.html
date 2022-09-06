@@ -7,7 +7,7 @@
 
 {% block page_content %}
   <h2>Movies List</h2>
-  <ul>
+  <ul class="list">
   {% for movie in movies %}
     <li><a href="{% url "movies:detail" movie.pk %}">{{ movie.title }} - {{ movie.created_at|date:"Y-m-d" }}</a></li>
   {% endfor %}
@@ -21,5 +21,9 @@
       {% if page_obj.has_next  %}
         <a href="?page={{page_obj.next_page_number}}">Next</a>
       {% endif %}
+    </div>
+
+    <div class="func-links">
+      <a href="{% url 'movies:create' %}">Create Movie</a>
     </div>
 {% endblock page_content %}
