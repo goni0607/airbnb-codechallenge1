@@ -46,11 +46,3 @@ class Create(CreateView):
         "rating",
         "writer",
     )
-
-
-# class detail(request, pk):
-#     try:
-#         book = models.Book.objects.get(pk=pk)
-#         return render(request, "books/detail.html", {"book": book})
-#     except models.Book.DoesNotExist:
-#         raise Http404()

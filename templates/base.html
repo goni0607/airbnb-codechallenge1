@@ -7,8 +7,11 @@
   <title>{% block page_title %}{% endblock page_title %} | AirBnB CodeChallenge</title>
   <style>
     body { display: flex; justify-content: center; }
-    #wrapper { display: flex; flex-direction: column; width: 800px; }
-    #nav-menu ul { display: flex; justify-content: space-between; }
+    #wrapper { display: flex; flex-direction: column; width: 800px; position: relative; }
+    #nav-auth { position: absolute; top: 10px; right: 0; list-style-type: none; }
+    #nav-auth li { display: inline; margin-left: .5rem; margin-right: .5rem; }
+    #nav-auth li:last-child { margin-right: 0; }
+    #nav-top { display: flex; justify-content: space-between; }
     .func-links { margin-top: 2rem; }
     .list li { margin: .5rem 0; }
     footer { margin-top: 3rem; }

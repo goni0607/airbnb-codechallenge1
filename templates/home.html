@@ -19,6 +19,7 @@
       {% endfor %}
       </ul>
     </div>
+    <a href="{% url 'books:list' %}">View more books</a>
   </section>
 
   <section>
@@ -32,6 +33,7 @@
       {% endfor %}
       </ul>
     </div>
+    <a href="{% url 'movies:list' %}">View more movies</a>
   </section>
 
   <section>
@@ -45,5 +47,6 @@
       {% endfor %}
       </ul>
     </div>
+    <a href="{% url 'people:list' %}">View more people</a>
   </section>
 {% endblock page_content %}
